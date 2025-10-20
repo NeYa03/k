@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HP-API</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HP-API</title>
+	<link rel="stylesheet" href="style.css" />
+
+	<link rel="icon" type="image/png" href="hp-icon.png" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>Welcome to the <span class="highlight">HP-API!</span></h1>
-    <p>Use these routes to request data on Harry Potter characters or spells:</p>
+	<div class="container">
+		<h1>Welcome to the <span class="highlight">HP-API!</span></h1>
+		<p>Use these routes to request data on Harry Potter characters or spells:</p>
 
-    <div class="buttons">
-      <button id="allCharacters">All Characters</button>
-      <button id="characterById">Specific Character by ID</button>
-      <button id="students">Hogwarts Students</button>
-      <button id="staff">Hogwarts Staff</button>
-      <button id="house">Characters in a House</button>
-      <button id="spells">All Spells</button>
-    </div>
+		<div id="mainMenu" class="buttons">
+			<button id="allCharacters">All Characters</button>
+			<button id="students">Hogwarts Students</button>
+			<button id="staff">Hogwarts Staff</button>
+			<button id="house">Characters in House</button>
+			<button id="spells">All Spells</button>
+		</div>
 
-    <div id="output" class="output"></div>
-  </div>
 
-  <script src="script.js"></script>
+		<div id="searchContainer" class="hidden">
+			<input type="text" id="searchInput" placeholder="Search character by name..." />
+		</div>
+
+
+		<div id="searchSpellsContainer" class="hidden">
+			<input type="text" id="searchSpellInput" placeholder="Search spell..." />
+		</div>
+
+
+		<div id="houseMenu" class="buttons hidden">
+			<button data-house="gryffindor">Gryffindor</button>
+			<button data-house="slytherin">Slytherin</button>
+			<button data-house="ravenclaw">Ravenclaw</button>
+			<button data-house="hufflepuff">Hufflepuff</button>
+		</div>
+
+		<button id="backButton" class="hidden">⬅ Back</button>
+
+		<div id="output" class="output"></div>
+	</div>
+
+	<script src="./node.js"></script>
 </body>
+
 </html>
